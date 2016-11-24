@@ -53,6 +53,16 @@ For each region, print
 			The killed enemies have to be printed ordered by enemy health.
 */
 void printEnemyByRegion(enemy* active1,enemy* active2 ,enemy* dead){
+	cout<< "active 1 contents\n";
+	PrintEnemy(active1);
+	cout<<endl;
+	cout<< "active 2 contents\n";
+	PrintEnemy(active2);
+	cout<<endl;
+	cout<< "dead contents\n";
+	PrintEnemy(dead);
+	cout<<endl;
+	/*
 	printRegion(active1,A_REG);
 	printRegion(active1,B_REG);
 	printRegion(active1,C_REG);
@@ -65,6 +75,7 @@ void printEnemyByRegion(enemy* active1,enemy* active2 ,enemy* dead){
 	printRegion(dead,B_REG);
 	printRegion(dead,C_REG);
 	printRegion(dead,D_REG);
+	*/
 
 }
 

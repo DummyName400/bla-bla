@@ -20,9 +20,9 @@ int main()
 	LoadFile(Constants,TowerHead, in_regFigthersHead, in_SHFighterHead);
 	int timestep = 1;
 	
-	while (timestep<=3)
+	while (timestep<=5)
 	{
-		cout<<"step "<<timestep;
+		cout<<"step "<<timestep<<endl;
 		Activate(in_regFigthersHead, ac_regFigthersHead, timestep, RegSize);
 		Activate(in_SHFighterHead, ac_SHFighterHead, timestep, SHsize);
 		if(RegSize!=0){
@@ -37,25 +37,29 @@ int main()
 			Kill(K1, DeadHead);
 			NumKilled++;
 			RegSize--;
+			K1=NULL;
 		}
 		if (K2 != NULL) {
 			Kill(K2, DeadHead);
 			NumKilled++;
 			RegSize--;
+			K2=NULL;
 		}
 		if (K3 != NULL) {
 			Kill(K3, DeadHead);
 			NumKilled++;
 			SHsize--;
+			K3=NULL;
 		}
 		if (K4 != NULL) {
 			Kill(K4, DeadHead);
 			NumKilled++;
 			SHsize--;
+			K4=NULL;
 		}
 		printEnemyByRegion(ac_regFigthersHead, ac_SHFighterHead, DeadHead);
 		timestep++;
 		Sleep(1000);
 	}
-		
+	cin.get();
 }

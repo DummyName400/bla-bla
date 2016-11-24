@@ -1,4 +1,4 @@
-﻿Build started 11/24/2016 9:36:13 PM.
+﻿Build started 11/24/2016 10:02:10 PM.
 Project "C:\Users\Administrator\Desktop\unknown-secret\Castle\Castle.vcxproj" on node 2 (Build target(s)).
 Project file contains ToolsVersion="14.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="4.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=291333.
 ClCompile:
@@ -16,4 +16,4 @@ Done Building Project "C:\Users\Administrator\Desktop\unknown-secret\Castle\Cast
 
 Build succeeded.
 
-Time Elapsed 00:00:03.61
+Time Elapsed 00:00:04.24
