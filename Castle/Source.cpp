@@ -58,8 +58,9 @@ int main()
 			K4=NULL;
 		}
 		printEnemyByRegion(ac_regFigthersHead, ac_SHFighterHead, DeadHead);
+		cout<<"        __________________________"<<"Time Step "
+			<<timestep<<"________________________________";
 		timestep++;
-		cout<<"__________________________________________________________";
 		Sleep(1000);
 	}while(!(ac_regFigthersHead==NULL&&ac_SHFighterHead==NULL
 		&&in_regFigthersHead.bounds.front==NULL&&in_SHFighterHead.bounds.front==NULL));
