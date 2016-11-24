@@ -53,33 +53,26 @@ For each region, print
 			The killed enemies have to be printed ordered by enemy health.
 */
 void printEnemyByRegion(enemy* active1,enemy* active2 ,enemy* dead){
-	cout<< "active 1 contents\n";
-	PrintEnemy(active1);
-	cout<<endl;
-	cout<< "active 2 contents\n";
-	PrintEnemy(active2);
-	cout<<endl;
-	cout<< "dead contents\n";
-	PrintEnemy(dead);
-	cout<<endl;
-	/*
-	printRegion(active1,A_REG);
-	printRegion(active1,B_REG);
-	printRegion(active1,C_REG);
-	printRegion(active1,D_REG);
-	printRegion(active2,A_REG);
-	printRegion(active2,B_REG);
-	printRegion(active2,C_REG);
-	printRegion(active2,D_REG);
-	printRegion(dead,A_REG);
-	printRegion(dead,B_REG);
-	printRegion(dead,C_REG);
-	printRegion(dead,D_REG);
-	*/
+	cout<<"\nListing Regular Fighters\n";
+	for(int i=65;i<65+4;i++){
+		char region= 'A'-i+65;
+		cout<<"\nRegion "<<(char)('A'+i-65)<<"\n";
+		printRegion(active1,i);
+	}
+	cout<<"\nListing shielded Fighters\n";
+	for(int i=65;i<65+4;i++){
+		cout<<"\nRegion "<<(char)('A'+i-65)<<"\n";
+		printRegion(active1,i);
+	}
+	cout<<"\nListing dead Fighters\n";
+	for(int i=65;i<65+4;i++){
+		cout<<"\nRegion "<<(char)('A'+i-65)<<"\n";
+		printRegion(dead,i);
+	}
 
 }
 
-void printRegion(enemy * list,REGION region)
+void printRegion(enemy * list,int region)
 {
 	while(list!=NULL){
 		if(list->Region==region){

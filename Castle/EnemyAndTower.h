@@ -20,5 +20,5 @@ void Activate(Queue &inactiveH, enemy* &activeH, int timestep,int& counter);
 
 void printEnemyByRegion(enemy* active1, enemy* active2, enemy* dead);
 
-void printRegion(enemy * list, REGION region);
+void printRegion(enemy * list, int region);
 void PrintEnemy(enemy*head);
