@@ -200,7 +200,7 @@ void Activate(Queue &inactiveH, enemy* &activeH, int timestep,int&counter)
 			count++;
 		}
 		else {
-			prev->next = current->next;
+			prev = current->next;
 			if (count == 0){
 				inactiveH.bounds.front = current->next;
 				if (current == inactiveH.bounds.rear) {
@@ -208,7 +208,7 @@ void Activate(Queue &inactiveH, enemy* &activeH, int timestep,int&counter)
 				}
 			}
 			MoveFromTo(current, activeH);
-			current=prev->next;
+			current=prev;
 			counter++;
 		}	
 	}

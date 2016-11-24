@@ -22,7 +22,8 @@ int main()
 	
 	do 
 	{
-		cout<<"\nstep "<<timestep<<endl<<"________________";
+		cout<<"        __________________________"<<"Time Step "
+			<<timestep<<"________________________________";
 		Activate(in_regFigthersHead, ac_regFigthersHead, timestep, RegSize);
 		Activate(in_SHFighterHead, ac_SHFighterHead, timestep, SHsize);
 		if(RegSize!=0){
@@ -58,8 +59,7 @@ int main()
 			K4=NULL;
 		}
 		printEnemyByRegion(ac_regFigthersHead, ac_SHFighterHead, DeadHead);
-		cout<<"        __________________________"<<"Time Step "
-			<<timestep<<"________________________________";
+		
 		timestep++;
 		Sleep(1000);
 	}while(!(ac_regFigthersHead==NULL&&ac_SHFighterHead==NULL
