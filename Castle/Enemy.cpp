@@ -54,19 +54,25 @@ For each region, print
 */
 void printEnemyByRegion(enemy* active1,enemy* active2 ,enemy* dead){
 	cout<<"\nListing Regular Fighters\n";
+	cout<<"_______________________________";
 	for(int i=65;i<65+4;i++){
 		char region= 'A'-i+65;
 		cout<<"\nRegion "<<(char)('A'+i-65)<<"\n";
+		cout<<"S TY T H Pow Prd R"<<endl;
 		printRegion(active1,i);
 	}
 	cout<<"\nListing shielded Fighters\n";
+	cout<<"_______________________________";
 	for(int i=65;i<65+4;i++){
 		cout<<"\nRegion "<<(char)('A'+i-65)<<"\n";
+		cout<<"S TY T H Pow Prd R"<<endl;
 		printRegion(active1,i);
 	}
 	cout<<"\nListing dead Fighters\n";
+	cout<<"_______________________________";
 	for(int i=65;i<65+4;i++){
 		cout<<"\nRegion "<<(char)('A'+i-65)<<"\n";
+		cout<<"S TY T H Pow Prd R"<<endl;
 		printRegion(dead,i);
 	}
 
@@ -77,11 +83,11 @@ void printRegion(enemy * list,int region)
 	while(list!=NULL){
 		if(list->Region==region){
 			cout << list->ID << " ";
-			cout << list->Type << " ";
+			cout << list->Type << "  ";
 			cout << list->ArrivalTime << " ";
 			cout << list->Health << " ";
-			cout << list->FirePower << " ";
-			cout << list->ReloadPeriod<< " ";
+			cout << list->FirePower << "  ";
+			cout << list->ReloadPeriod<< "  ";
 			cout << list->Region << " ";
 			cout<<endl;
 		}

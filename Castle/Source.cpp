@@ -20,9 +20,9 @@ int main()
 	LoadFile(Constants,TowerHead, in_regFigthersHead, in_SHFighterHead);
 	int timestep = 1;
 	
-	while (timestep<=5)
+	do 
 	{
-		cout<<"step "<<timestep<<endl;
+		cout<<"\nstep "<<timestep<<endl<<"________________";
 		Activate(in_regFigthersHead, ac_regFigthersHead, timestep, RegSize);
 		Activate(in_SHFighterHead, ac_SHFighterHead, timestep, SHsize);
 		if(RegSize!=0){
@@ -59,7 +59,10 @@ int main()
 		}
 		printEnemyByRegion(ac_regFigthersHead, ac_SHFighterHead, DeadHead);
 		timestep++;
+		cout<<"__________________________________________________________";
 		Sleep(1000);
-	}
+	}while(!(ac_regFigthersHead==NULL&&ac_SHFighterHead==NULL
+		&&in_regFigthersHead.bounds.front==NULL&&in_SHFighterHead.bounds.front==NULL));
+	cout<<"\n ALL enemies died , Program terminated . \n"<<"War ended !";
 	cin.get();
 }
