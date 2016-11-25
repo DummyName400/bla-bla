@@ -53,7 +53,7 @@ For each region, print
 			The killed enemies have to be printed ordered by enemy health.
 */
 void printEnemyByRegion(enemy* active1,enemy* active2 ,enemy* dead){
-	cout<<"\nListing Regular Fighters\n";
+	cout<<"\nListing normal active Fighters\n";
 	cout<<"_______________________________";
 	for(int i=65;i<65+4;i++){
 		char region= 'A'-i+65;
@@ -61,7 +61,7 @@ void printEnemyByRegion(enemy* active1,enemy* active2 ,enemy* dead){
 		cout<<"S TY T H Pow Prd R"<<endl;
 		printRegion(active1,i);
 	}
-	cout<<"\nListing shielded Fighters\n";
+	cout<<"\nListing high priority active Fighters\n";
 	cout<<"_______________________________";
 	for(int i=65;i<65+4;i++){
 		cout<<"\nRegion "<<(char)('A'+i-65)<<"\n";
@@ -80,8 +80,10 @@ void printEnemyByRegion(enemy* active1,enemy* active2 ,enemy* dead){
 
 void printRegion(enemy * list,int region)
 {
+	int total=0;
 	while(list!=NULL){
 		if(list->Region==region){
+			total++;
 			cout << list->ID << " ";
 			cout << list->Type << "  ";
 			cout << list->ArrivalTime << " ";
@@ -93,6 +95,7 @@ void printRegion(enemy * list,int region)
 		}
 		list=list->next;
 	}
+	cout<<"\ntotal number: "<<total<<" \n";
 }
 
 
@@ -173,7 +176,7 @@ void PrintEnemy(enemy*head) {
 
 void MoveFromTo(enemy* &origin, enemy* &destination)
 {
-	origin->next = NULL;          //detaching the node form its original list 
+	origin->next = NULL;          //detaching the node from its original list 
     //inserting the node at the end of the desetination list
 	if (destination == NULL) {
 		destination = origin;

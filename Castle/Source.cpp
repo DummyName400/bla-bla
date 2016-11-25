@@ -2,7 +2,7 @@
 
 int main()
 {
-	cout<<"start working"<<endl;
+	cout<<"War Started"<<endl;
 	int RegSize = 0, SHsize = 0, NumKilled = 0;
 	Tower* TowerHead = NULL; 
 	Queue in_regFigthersHead ; 
@@ -23,7 +23,7 @@ int main()
 	do 
 	{
 		cout<<"        __________________________"<<"Time Step "
-			<<timestep<<"________________________________";
+			<<timestep<<"________________________________"<<endl;
 		Activate(in_regFigthersHead, ac_regFigthersHead, timestep, RegSize);
 		Activate(in_SHFighterHead, ac_SHFighterHead, timestep, SHsize);
 		if(RegSize!=0){
@@ -58,6 +58,8 @@ int main()
 			SHsize--;
 			K4=NULL;
 		}
+		cout<<"Total Number of Active enemies : "<<SHsize+RegSize<<endl;
+		cout<<"Total Number of Killed enemies : "<<NumKilled<<endl;
 		printEnemyByRegion(ac_regFigthersHead, ac_SHFighterHead, DeadHead);
 		
 		timestep++;
