@@ -124,7 +124,6 @@ void Kill(enemy* killed, enemy* &DeadH)
 			}
 		}
 		prev->next = killed;
-		return;
 	}
 }
 
@@ -153,21 +152,6 @@ enemy* SearchEnemy(enemy* &ActiveHead, int index)
 	return NULL;
 }
 
-void PrintEnemy(enemy*head) {
-	cout << "Enemy list is : " << endl;
-	while (head != NULL) {
-		cout << head->ID << " ";
-		cout << head->Type << " ";
-		cout << head->ArrivalTime << " ";
-		cout << head->Health << " ";
-		cout << head->FirePower << " ";
-		cout << head->ReloadPeriod << " ";
-		cout << head->Region << " ";
-		cout << endl;
-		head = head->next;
-	}
-	cout << endl;
-}
 
 void MoveFromTo(enemy* &origin, enemy* &destination)
 {
