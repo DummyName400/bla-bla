@@ -1,9 +1,10 @@
-﻿Build started 11/25/2016 1:10:54 AM.
+﻿Build started 11/25/2016 7:43:16 AM.
 Project "C:\Users\Administrator\Desktop\DS project\Castle\Castle.vcxproj" on node 2 (Build target(s)).
 Project file contains ToolsVersion="14.0". This toolset may be unknown or missing, in which case you may be able to resolve this by installing the appropriate version of MSBuild, or the build may have been forced to a particular ToolsVersion for policy reasons. Treating the project as if it had ToolsVersion="4.0". For more information, please see http://go.microsoft.com/fwlink/?LinkId=291333.
 ClCompile:
-  D:\Z_Kareem\software\VS installation\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Source.cpp
-  Source.cpp
+  D:\Z_Kareem\software\VS installation\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D _DEBUG /D _CONSOLE /D _UNICODE /D UNICODE /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Enemy.cpp
+  Enemy.cpp
+c:\users\administrator\desktop\ds project\castle\enemy.cpp(11): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
 Link:
   D:\Z_Kareem\software\VS installation\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Administrator\Desktop\DS project\Debug\Castle.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Administrator\Desktop\DS project\Debug\Castle.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Administrator\Desktop\DS project\Debug\Castle.lib" /MACHINE:X86 /SAFESEH Debug\Enemy.obj
   Debug\File_IO.obj
@@ -16,4 +17,4 @@ Done Building Project "C:\Users\Administrator\Desktop\DS project\Castle\Castle.v
 
 Build succeeded.
 
-Time Elapsed 00:00:04.34
+Time Elapsed 00:00:05.35

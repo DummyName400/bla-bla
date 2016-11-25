@@ -53,34 +53,30 @@ For each region, print
 			The killed enemies have to be printed ordered by enemy health.
 */
 void printEnemyByRegion(enemy* active1,enemy* active2 ,enemy* dead){
-	cout<<"\nListing normal active Fighters\n";
+	cout<<"\nListing  active Fighters\n";
 	cout<<"_______________________________";
-	for(int i=65;i<65+4;i++){
-		char region= 'A'-i+65;
-		cout<<"\nRegion "<<(char)('A'+i-65)<<"\n";
-		cout<<"S TY T H Pow Prd R"<<endl;
-		printRegion(active1,i);
-	}
-	cout<<"\nListing high priority active Fighters\n";
-	cout<<"_______________________________";
+	int total=0;
 	for(int i=65;i<65+4;i++){
 		cout<<"\nRegion "<<(char)('A'+i-65)<<"\n";
 		cout<<"S TY T H Pow Prd R"<<endl;
-		printRegion(active1,i);
+		printRegion(active1,i,total);
+		printRegion(active2,i,total);
+		cout<<"\ntotal number: "<<total<<" \n";
 	}
+	total=0;
 	cout<<"\nListing dead Fighters\n";
 	cout<<"_______________________________";
 	for(int i=65;i<65+4;i++){
 		cout<<"\nRegion "<<(char)('A'+i-65)<<"\n";
 		cout<<"S TY T H Pow Prd R"<<endl;
-		printRegion(dead,i);
+		printRegion(dead,i,total);
+		cout<<"\ntotal number: "<<total<<" \n";
 	}
 
 }
 
-void printRegion(enemy * list,int region)
+void printRegion(enemy * list,int region,int &total)
 {
-	int total=0;
 	while(list!=NULL){
 		if(list->Region==region){
 			total++;
@@ -95,12 +91,12 @@ void printRegion(enemy * list,int region)
 		}
 		list=list->next;
 	}
-	cout<<"\ntotal number: "<<total<<" \n";
 }
 
 
 void Kill(enemy* killed, enemy* &DeadH)
 {
+	killed->next =NULL;
 	if (DeadH == NULL) {
 		DeadH = killed;
 		return;
@@ -128,7 +124,6 @@ void Kill(enemy* killed, enemy* &DeadH)
 			}
 		}
 		prev->next = killed;
-		killed->next =NULL;
 		return;
 	}
 }
@@ -148,7 +143,7 @@ enemy* SearchEnemy(enemy* &ActiveHead, int index)
 	enemy* prev= ActiveHead;
 	while (iterator != NULL) {
 		if (i == index){
-			prev=iterator->next;
+			prev->next=iterator->next;
 			return iterator;
 		}
 		prev=iterator;
